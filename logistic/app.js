@@ -33,6 +33,22 @@ App({
       }
     })
   },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    console.log("onShow")
+    if (this.globalData.reLaunch)
+      wx.reLaunch({url: "/pages/start/start"})
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    this.globalData.reLaunch = true
+    console.log("onHide")
+  },
   globalData: {
     userInfo: null
   }

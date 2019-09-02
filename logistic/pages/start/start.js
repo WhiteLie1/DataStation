@@ -37,7 +37,8 @@ Page({
     }
   },
   onReady: function() {
-    var that = this;
+    //这个是之前的头像转动的代码
+   /* var that = this;
     setTimeout(function() {
       that.setData({
         remind: ''
@@ -55,6 +56,6 @@ Page({
           angle: angle
         });
       }
-    });
+    });*/
   }
 });
