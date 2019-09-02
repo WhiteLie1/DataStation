@@ -1,0 +1,150 @@
+.outter{
+
+ display: flex;
+
+ width: 100%;
+
+ justify-content: center;
+
+ border-bottom: 2rpx solid black;
+
+
+
+}
+
+.title{
+  text-align: center;
+  font-size:150%;
+  margin-top: 10rpx;
+  letter-spacing:1ch;
+}
+
+.chart{
+  margin-top: 50rpx;
+}
+.outter2{
+  background: rgba(253, 255, 150, 0.219);
+ display: flex;
+
+ width: 100%;
+ border-bottom: 2rpx solid rgba(0, 0, 0, 0);
+ justify-content: center;
+
+
+}
+
+.border {
+        border: 1px dotted black;
+}
+
+
+
+.content{
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+mychart-one {
+    position: absolute; 
+    top: 0;
+    height: 10;
+    left: 0;
+    right: 0;
+}
+
+.slid-item{
+
+ margin-left: 20rpx;
+
+ margin-right: 20rpx;
+
+}
+
+.on{
+
+ border-bottom: 3rpx solid red;
+
+}
+.container{
+  background: rgba(253, 255, 150, 0.219);
+  flex-direction:column;
+}
+
+.container2{
+  background: rgba(253, 255, 150, 0.219);
+  flex-direction:column;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.table1 {
+margin-top:800rpx;
+ border: 0px solid darkgray;
+ font-size: 12px;
+ width: 100%; 
+ height: 1000rpx;
+}
+.table2 {
+ border: 0px solid darkgray;
+ font-size: 12px;
+ width: 100%; 
+ height: 1000rpx;
+}
+
+.tr {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ height: 2rem;
+ align-items: center;
+}
+
+.bg-g{
+  background: #E6F3F9;
+}
+.td1 {
+  width:20%;
+  justify-content: center;
+  text-align: center;
+    background: #3366FF;
+
+}
+.td2 {
+    background: #3366FF;
+  width:60%;
+  justify-content: center;
+  text-align: center;
+ 
+}
+.th1 {
+  width:20%;
+  justify-content: center;
+  text-align: center;
+}
+.th2 {
+  width:60%;
+  justify-content: center;
+  text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-b{
+ background: #3366FF;
+}
+.th {
+ width: 45%;
+ justify-content: center;
+ background: #3366FF;
+ color: #fff;
+ display: flex;
+ height: 2rem;
+ align-items: center;
+}

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/place1/place1",
+    "pages/place2/place2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/1.png",
+        "iconPath": "image/1.png",
+        "pagePath": "pages/place1/place1",
+        "text": "广东惠州"
+      },
+      {
+        "selectedIconPath": "image/2.png",
+        "iconPath": "image/2.png",
+        "pagePath": "pages/place2/place2",
+        "text": "上海金山"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

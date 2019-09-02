@@ -1,0 +1,18 @@
+<!--start.wxml-->
+<view class="container" >
+  <view class="title" >
+    <image class="title" src="/image/cover.png"></image>
+  </view>
+  <block >
+    <image class="title" src="/image/cover.png"></image>
+    <view class="content">
+      <view class="hd">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+           <view class="confirm-btn" bindtap='goToIndex'>
+          <text >奇螣智慧供应链系统</text>
+        </view>
+      </view>
+
+    </view>
+  </block>
+</view>

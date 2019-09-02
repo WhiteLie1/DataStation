@@ -1,0 +1,135 @@
+<view class="outter" style="width: 100%; height: 50rpx">
+  <view data-tapid="0" class="slid-item {{currentid2==0?'on':''}}" bindtap="tap2">数据展示</view>
+  <view data-tapid="1" class="slid-item {{currentid2==1?'on':''}}" bindtap="tap2">数据统计</view>
+</view>
+
+<view class="outter2" style="width: 100%; height: 50rpx" wx:if="{{currentid2  == 1}}">
+  <view data-tapid="0" class="slid-item {{currentid3==0?'on':''}}" bindtap="tap3">周</view>
+  <view data-tapid="1" class="slid-item {{currentid3==1?'on':''}}" bindtap="tap3">月</view>
+  <view data-tapid="2" class="slid-item {{currentid3==2?'on':''}}" bindtap="tap3">年</view>
+</view>
+
+<view class="container " scroll-x="true" style="width: 100%; height: 800rpx" wx:if="{{currentid2  == 0}}">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+</view>
+
+<view class="container2 " scroll-x="true" style="width: 100%; height: 750rpx"  wx:if="{{currentid2  == 1}}">
+    <ec-canvas class="chart" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}" wx:if="{{currentid3  == 0}}"></ec-canvas>
+    <ec-canvas class="chart" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec3 }}" wx:if="{{currentid3  == 1}}"></ec-canvas>
+    <ec-canvas class="chart" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec4 }}" wx:if="{{currentid3  == 2}}"></ec-canvas>
+  </view>
+
+
+
+<scroll-view class="table{{currentid2==0?'1':'2'}}" scroll-y>
+<view class="title">原始数据</view>
+  <view class="outter">
+    <view data-tapid="0" class="slid-item {{currentid1==0?'on':''}}" bindtap="tap">MCA</view>
+    <view data-tapid="1" class="slid-item {{currentid1==1?'on':''}}" bindtap="tap">AEO1</view>
+    <view data-tapid="2" class="slid-item {{currentid1==2?'on':''}}" bindtap="tap">AEO3</view>
+    <view data-tapid="3" class="slid-item {{currentid1==3?'on':''}}" bindtap="tap">SLE1S</view>
+    <view data-tapid="4" class="slid-item {{currentid1==4?'on':''}}" bindtap="tap">AEO7</view>
+  </view>
+  <view class="tr bg-b" wx:if="{{currentid1  == 0}}">
+    <view class="td1">序号</view>
+    <view class="td1">MCA数据</view>
+    <view class="td2 ">采集时间</view>
+  </view>
+
+  <view class="tr bg-b" wx:if="{{currentid1  == 1}}">
+    <view class="td1">序号</view>
+    <view class="td1">AE01数据</view>
+    <view class="td2 ">采集时间</view>
+  </view>
+
+  <view class="tr bg-b" wx:if="{{currentid1  == 2}}">
+    <view class="td1">序号</view>
+    <view class="td1">AE03数据</view>
+    <view class="td2 ">采集时间</view>
+  </view>
+  <view class="tr bg-b" wx:if="{{currentid1  == 3}}">
+    <view class="td1">序号</view>
+    <view class="td1">SLE1S数据</view>
+    <view class="td2 ">采集时间</view>
+  </view>
+  <view class="tr bg-b" wx:if="{{currentid1  == 4}}">
+    <view class="td1">序号</view>
+    <view class="td1">AEO7数据</view>
+    <view class="td2 ">采集时间</view>
+  </view>
+  <block wx:for="{{listData1}}" wx:if="{{currentid1  == 0}}" wx:key="{[code]}">
+    <view class="tr bg-g" wx:if="{{currentid1  == 0}}" wx:if="{{index % 2 == 0}}">
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.mca}}</view>
+      <view class="th2">{{item.update_time}}</view>
+    </view>
+
+    <view class="tr" wx:else>
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.mca}}</view>
+      <view class="th2">{{item.update_time}}</view>
+
+    </view>
+  </block>
+
+  <block wx:for="{{listData2}}" wx:if="{{currentid1  == 1}}" wx:key="{[code]}">
+    <view class="tr bg-g" wx:if="{{currentid1  == 1}}" wx:if="{{index % 2 == 0}}">
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.aAE}}</view>
+      <view class="th2">{{item.update_time}}</view>
+    </view>
+
+    <view class="tr" wx:else>
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.aAE}}</view>
+      <view class="th2">{{item.update_time}}</view>
+
+    </view>
+  </block>
+
+  <block wx:for="{{listData3}}" wx:if="{{currentid1  == 2}}" wx:key="{[code]}">
+    <view class="tr bg-g" wx:if="{{currentid1  == 2}}" wx:if="{{index % 2 == 0}}">
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.bAE}}</view>
+      <view class="th2">{{item.update_time}}</view>
+    </view>
+
+    <view class="tr" wx:else>
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.bAE}}</view>
+      <view class="th2">{{item.update_time}}</view>
+
+    </view>
+  </block>
+
+  <block wx:for="{{listData4}}" wx:if="{{currentid1  == 3}}" wx:key="{[code]}">
+    <view class="tr bg-g" wx:if="{{currentid1  == 3}}" wx:if="{{index % 2 == 0}}">
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.SLE1S}}</view>
+      <view class="th2">{{item.update_time}}</view>
+    </view>
+
+    <view class="tr" wx:else>
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.SLE1S}}</view>
+      <view class="th2">{{item.update_time}}</view>
+
+    </view>
+  </block>
+
+  <block wx:for="{{listData5}}" wx:if="{{currentid1  == 4}}" wx:key="{[code]}">
+    <view class="tr bg-g" wx:if="{{currentid1  == 4}}" wx:if="{{index % 2 == 0}}">
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.AEO7}}</view>
+      <view class="th2">{{item.update_time}}</view>
+    </view>
+
+    <view class="tr" wx:else>
+      <view class="th1">{{item.num}}</view>
+      <view class="th1">{{item.AEO7}}</view>
+      <view class="th2">{{item.update_time}}</view>
+
+    </view>
+  </block>
+
+</scroll-view>
