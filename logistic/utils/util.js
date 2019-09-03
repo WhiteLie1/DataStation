@@ -1,4 +1,4 @@
-const formatTime = date => {
+const formatTime = date => { //获取系统当前时间
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
