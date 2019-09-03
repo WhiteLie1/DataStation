@@ -8,8 +8,9 @@ Page({
     userInfo: {}
   },
   goToIndex: function() {
+    console.log('这是进入到跳转页面')
     wx.switchTab({
-      url: '/pages/place1/place1',
+      url: '/pages/classify/classify',
     });
   },
   onLoad: function() {

@@ -1,0 +1,79 @@
+page{
+  background-color: #f5f5f5;
+}
+/* 轮播图图片摆放位置 */
+.slide_image {
+  position: relative;
+  top: 20rpx;
+  left: 55rpx;
+}
+
+/* 四大功能模块 */
+.function{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-top: 30rpx;
+  padding-bottom: 20rpx;
+  width: 100%;
+  border-bottom: 2rpx #E4E4E7 solid;
+}
+.function_mode{
+  display: flex;
+  flex-direction: column;
+  padding-left:80rpx;
+  text-align: center;
+}
+.function_mode_img{
+  border-radius: 50%;
+  width:85rpx;
+  height: 85rpx;
+}
+.function_mode_word{
+  font-size: 25rpx;
+}
+
+/* 推荐护肤品单 */
+.goods_listTitle{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25rpx;
+  margin-left: 35rpx;
+}
+.goods_listTitle_text{
+  font-size: 30rpx;
+  margin-left: 15rpx;
+}
+.goods{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 96%;
+  left:2%;
+}
+.goods_mode{
+  width: 30%;
+  height: 310rpx;
+  border: 2rpx solid #E4E4E7;
+  box-shadow: 5rpx 5rpx 5rpx #E4E4E7;
+  border-radius: 10rpx;
+  margin-left: 2%;
+  margin-top: 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+.goods_mode_desc{
+  font-size: 25rpx;
+  margin-left: 5rpx;
+}
+.goods_mode_tag{
+  font-size: 20rpx;
+  color: red;
+  width: 50rpx;
+  height:28rpx;
+  text-align: center;
+  margin-left: 5rpx;
+  border: 2rpx red solid;
+}

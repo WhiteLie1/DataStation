@@ -1,0 +1,117 @@
+page {
+  color: whitesmoke;
+}
+
+/* 背景色 */
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1; /*可以让图片置于最底层，不会影响其它部分*/
+}
+
+/* 头像，关注，私信 */
+
+.top {
+  display: flex;
+  flex-direction: row;
+  padding: 25rpx;
+}
+
+.user_img {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+}
+
+.follow {
+  width: 92rpx;
+  height: 45rpx;
+  border: 2rpx #fff solid;
+  color: whitesmoke;
+  margin-top: 60rpx;
+  margin-left: 350rpx;
+}
+
+.msg {
+  border: 2rpx #fff solid;
+  width: 92rpx;
+  height: 45rpx;
+  margin-top: 60rpx;
+  margin-left: 20rpx;
+}
+
+/* 名字 */
+
+.user_name {
+  color: whitesmoke;
+  font-size: 30rpx;
+  margin-left: 35rpx;
+}
+
+/* 关注，粉丝 */
+
+.follows {
+  position: relative;
+  margin-left: 20rpx;
+  width: 100%;
+}
+
+/* tag标签 */
+
+.tag {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15rpx;
+}
+
+.tag_model {
+  border: 1rpx #fff solid;
+  height: 35rpx;
+  width: 60rpx;
+  margin-left: 15rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+/* 护肤单列表 */
+
+.white {
+  position: relative;
+  margin-top: 30rpx;
+  background-color: #fff;
+  border: 2rpx #fff solid;
+  border-top-right-radius: 45rpx;
+  border-top-left-radius: 45rpx;
+  width: 100%;
+}
+.title{
+  text-align: center;
+  color: #747474;
+  border-bottom: 2rpx #eaeaea solid;
+}
+.listdesc{
+  color: #747474;
+  font-size: 28rpx;
+  margin-left: 60rpx;
+}
+.model {
+  width: 90%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  padding: 25rpx;
+  border-bottom: 2rpx #eaeaea solid;
+}
+
+.modelText {
+  display: flex;
+  flex-direction: column;
+  color: #747474;
+}
+

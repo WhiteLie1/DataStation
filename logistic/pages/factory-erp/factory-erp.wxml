@@ -1,0 +1,32 @@
+<!-- pages/factory-erp/factory-erp.wxml -->
+
+    <view class="function">
+        <view wx:for="{{ function }}" wx:key="{{ index }}">
+            <navigator class="function_mode" url="{{ item.event }}">
+                <image class="function_mode_img" src="{{ item.img }}"></image>
+                <text class="function_mode_word">{{ item.name }}</text>
+            </navigator>
+        </view>
+    </view>
+
+     <view class="function">
+        <view wx:for="{{ function2 }}" wx:key="{{ index }}">
+            <navigator class="function_mode" url="{{ item.event }}">
+                <image class="function_mode_img" src="{{ item.img }}"></image>
+                <text class="function_mode_word">{{ item.name }}</text>
+            </navigator>
+        </view>
+    </view>
+
+    <view class="function">
+        <view wx:for="{{ function3 }}" wx:key="{{ index }}">
+            <navigator class="function_mode" url="{{ item.event }}">
+                <image class="function_mode_img" src="{{ item.img }}"></image>
+                <text class="function_mode_word">{{ item.name }}</text>
+            </navigator>
+        </view>
+    </view>
+   
+      
+
+ 

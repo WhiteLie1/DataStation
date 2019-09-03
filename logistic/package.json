@@ -1,0 +1,14 @@
+{
+  "name": "logistic",
+  "version": "1.0.0",
+  "description": "2019大二暑期制作的微信小程序，使用E-charts插件绘制图标，当前版本数据为静态展示",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^0.5.20"
+  }
+}

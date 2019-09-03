@@ -1,0 +1,37 @@
+<!-- 背景 -->
+<view class="bc">
+  <image class="background" src="/icons/background1.png"></image>
+</view>
+<!-- 头像，关注，私信 -->
+<view class="top">
+  <image class="user_img" src="{{user.img}}"></image>
+  <view class="follow">+关注</view>
+  <image class="msg" src="/icons/msg.png" style="width:60rpx;height:45rpx"></image>
+</view>
+<!-- 姓名 -->
+<view class="user_name">{{user.name}}</view>
+<!-- 关注，粉丝 -->
+<view class="follows">关注 {{user.follow}} | 粉丝 {{user.follows}}</view>
+<!-- tag标签 -->
+<view class="tag">
+  <view wx:for="{{tag}}" wx:key="{{index}}">
+    <view class="tag_model">{{item.tag}}</view>
+  </view>
+</view>
+<!-- 护肤单列表 -->
+<view class="white">
+  <view class="title">{{user.name}}的秘笈</view>
+  <view class="listdesc">
+    <text>列表({{number}})</text>
+    <text style="margin-left:350rpx">共被收藏{{num}}次</text>
+  </view>
+  <view wx:for="{{list}}" wx:key="{{index}}">
+    <view class="model">
+      <image src="{{item.img}}" style="width:130rpx;height:130rpx;margin-left:15rpx"></image>
+      <view class="modelText">
+        <text style="margin-left:25rpx">{{item.title}}</text>
+        <text style="margin-left:25rpx;font-size:25rpx">{{item.number}}件</text>
+      </view>
+    </view>
+  </view>
+</view>

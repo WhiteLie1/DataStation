@@ -1,0 +1,35 @@
+<!-- 展示部分 -->
+<view class="content">
+  <image class='background' src="/icons/background.png" mode="aspectFill"></image>
+</view>
+<input class="bg_input" placeholder="搜索护肤单内护肤单品"></input>
+
+<!-- 商品照片以及右侧文字 -->
+<view class="box">
+  <image src="{{goods_img}}" style="width:250rpx;height:250rpx;margin-left:20rpx;opacity:{{0.8}};border-ra"></image>
+  <view class="box_text">
+    <view class="bc_title">[ {{bc_title}} ]</view>
+    <navigator class="bc_user" url="./userDesc/userDesc">
+      <image class="user_img" src="{{user_img}}"></image>
+      <text class="user_name">{{user_name}}</text>
+      <image src="/icons/right.png" style="width:35rpx;height:35rpx;margin-left:10rpx;margin-top:14rpx;"></image>
+    </navigator>
+    <textarea class="bg_desc" rows="3" cols="10">{{bg_desc}}</textarea>
+  </view>
+</view>
+
+<!-- 四个操作 -->
+<view class="function_style">
+  <view class="function" wx:for="{{functions}}" wx:key="{{index}}" bindtap="{{item.event}}">
+    <image src="{{item.active}}" style="width:65rpx;height:65rpx;margin-left:53rpx;"></image>
+    <text style="color:white">{{item.text}}</text>
+  </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="list">
+  <view class="goods_card" wx:for="{{goodList}}" wx:key="{{index}}">
+  <!-- 数据库中缺少一个商品详细信息 -->
+    <van-card thumb-link="/pages/commodity/detail/detail?id={{ item._id }}" price="{{item.price}}" desc="{{test_desc}}" title="{{item.name}}" thumb="{{ item.thumbnail }}" />
+  </view>
+</view>

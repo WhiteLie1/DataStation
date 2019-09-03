@@ -1,0 +1,82 @@
+<view class="page">
+  <view class="page__hd">
+    <swiper indicator-dots='true' autoplay='false' circular='true' style="height: 55vh">
+      <swiper-item wx:for='{{ commodity.detailImage }}'>
+        <image src="{{ item }}" class="slide-image" mode="aspectFill" bindtap="previewImage" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="page__bd">
+    <view class="info-price clear">
+      <view class='price'>{{commodity.price}} </view>
+      <view class='fenxiang'>
+        <button class='fxbtn' open-type="share">
+          <view style='height:20px;margin-top:8px;'>
+            <image src='/icons/fenxiang.png' mode="aspectFill"></image>
+          </view>
+          <view>分享</view>
+        </button>
+      </view>
+    </view>
+    <view class="info-title">
+      <text>{{commodity.name}}</text>
+    </view>
+
+    <view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
+      <view class="clearfix flex grey gridXt">
+        <text class="sub"><block wx:if='{{goods_info.goods_yunfei==0.00}}'>运费：包邮</block><block wx:else>运费：{{goods_info.goods_yunfei}}</block></text>
+        <text class="sub">库存：{{commodity.stock}}</text>
+        <text class="sub">销量：{{commodity.hot}}</text>
+      </view>
+    </view>
+    <block wx:if="{{pjDataList!=''}}">
+      <!--评价-->
+      <view class='pj_box'>
+        <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+          <view style='float:left;'>商品评价</view>
+          <view style='float:right;margin-left:2px;margin-top:-1px;'>
+            <image src="/icons/right1.png" class="ico_img_jt"></image>
+          </view>
+          <view style='float:right;font-size:12px;color:#A2A2A2;'>
+            <navigator url="pjList?id={{goods_id}}">查看全部</navigator>
+          </view>
+          <view class='clear'></view>
+        </view>
+        <block wx:for="{{pjDataList}}" wx:for-item="item" wx:key="pj">
+          <view class="list_item">
+            <view class='pj_u_info clear'>
+              <view class='header_img'>
+                <image src="{{item.headpic}}" mode="aspectFit"></image>
+              </view>
+              <view class='name'>{{item.author}}</view>
+              <view class='time'>{{item.add_time}}</view>
+            </view>
+            <view class='pj_cont'>
+              {{item.content}}
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+    <!--商品详情-->
+    <view class='details_box'>
+      <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+        <view>商品详情</view>
+      </view>
+      <view style='padding:10px 0px;'>
+        <view class="wxParse">
+          {{commodity.sku}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 购买部分 -->
+    <view class="bottom">
+      <view bindtap="{{item.event}}" hover-class="active" class="bottom_function" wx:for="{{bottom_function}}" wx:key="{{index}}">
+        <image src="{{item.icon}}" style="width:45rpx;height:45rpx;margin-left:70rpx;margin-top:15rpx"></image>
+        <text style="font-size:28rpx;text-align:center">{{item.text}}</text>
+      </view>
+      <button class="goumai" bindtap='buy'>立即购买</button>
+    </view>
+  </view>
+</view>

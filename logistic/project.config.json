@@ -4,12 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"nodeModules": true,
 		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
 		"coverView": true
 	},
 	"compileType": "miniprogram",
@@ -21,7 +24,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"appid": "wx0bcf0e8b07406faf",
+	"appid": "wxa7e38c79d62f8572",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,0 +1,31 @@
+<!-- 搜索栏 -->
+<van-tabs active="{{ active }}" color="gray">
+
+  <van-tab title="推荐">
+
+  <!-- 轮播图 -->
+    <swiper style="margin-top:35rpx" circular="true" previous-margin="250rpx" next-margin="180rpx" >
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+<!-- 护肤单列表 -->
+<view class="goods">
+  <view class="goods_mode" wx:for="{{goods}}" wx:key="{{index}}">
+    <image class="goods_mode_img" src="{{item.img}}" style="width:220rpx;height:180rpx"></image>
+    <text class="goods_mode_desc">{{item.desc}}</text>
+    <text class="goods_mode_tag">{{item.tag}}</text>
+  </view>
+</view>
+  </van-tab>
+
+
+  <van-tab title="美白">内容 2</van-tab>
+  <van-tab title="补水">内容 3</van-tab>
+  <van-tab title="保湿">内容 4</van-tab>
+  <van-tab title="祛痘">内容 5</van-tab>
+  <van-tab title="抗氧化">内容 6</van-tab>
+</van-tabs>

@@ -1,0 +1,35 @@
+<!-- 三大列表 -->
+<view class="list">
+  <view class="listDetail" wx:for="{{listDetail}}" wx:key="{{index}}">
+    <image src="{{item.src}}" style="width:65rpx;height:65rpx;margin-top:10rpx;margin-left:10rpx;"></image>
+    <text style="margin-left:35rpx;margin-top:15rpx">{{item.text}}</text>
+    <view style="margin-top:15rpx;margin-left:350rpx">{{item.number}}
+      <image src="/icons/right1.png" style="width:35rpx;height:35rpx;top:10rpx"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 我的个人项目 -->
+<view class="bc">
+  <image class="background" src="/icons/backgroundDiray.png" mode="aspectFill"></image>
+</view>
+<view class="title">
+  <image src="/icons/diaryBottom.png" style="width:40rpx;height:40rpx;margin-left:25rpx;margin-top:10rpx"></image>
+  <text style="margin-left:20rpx">我创建的护肤单</text>
+  <image src="/icons/diaryAdd.png" style="width:40rpx;height:40rpx;margin-left:350rpx;margin-top:10rpx"></image>
+</view>
+<view wx:for="{{list}}" wx:key="{{index}}">
+  <van-swipe-cell id="swipe-cell" right-width="{{ 60 }}" left-width="{{ 60 }}" async-close bind:close="onClose">
+    <view class="left" slot="left">管理</view>
+    <van-cell-group>
+      <view class="model">
+        <image src="{{item.img}}" style="width:130rpx;height:130rpx;margin-left:15rpx"></image>
+        <view class="modelText">
+          <text style="margin-left:25rpx">{{item.title}}</text>
+          <text style="margin-left:25rpx;font-size:25rpx">{{item.number}}件</text>
+        </view>
+      </view>
+    </van-cell-group>
+    <view class="right" slot="right">删除</view>
+  </van-swipe-cell>
+</view>

@@ -1,0 +1,27 @@
+/* pages/factory-erp/factory-erp.wxss */
+/* 四大功能模块 */
+.function{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    margin-top: 30rpx;
+    padding-bottom: 20rpx;
+    width: 100%;
+    border-bottom: 2rpx #E4E4E7 solid;
+  }
+  .function_mode{
+    display: flex;
+    flex-direction: column;
+    padding-left:80rpx;
+    text-align: center;
+  }
+  .function_mode_img{
+    border-radius: 50%;
+    width:85rpx;
+    height: 85rpx;
+  }
+  .function_mode_word{
+    font-size: 25rpx;
+  }
+ 

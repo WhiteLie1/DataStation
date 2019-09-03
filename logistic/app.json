@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/start/start",
+    "pages/classify/classify",
+    "pages/factory-erp/factory-erp",
+    
     "pages/place1/place1",
     "pages/place2/place2"
   ],
@@ -16,19 +19,31 @@
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "image/1.png",
-        "iconPath": "image/1.png",
-        "pagePath": "pages/place1/place1",
-        "text": "广东惠州"
+        "selectedIconPath": "icons/baseline_category_black_48dp.png",
+        "pagePath": "pages/classify/classify",
+        "iconPath": "icons/baseline_category_black_48dp.png",
+        "text": "首页"
       },
       {
-        "selectedIconPath": "image/2.png",
-        "iconPath": "image/2.png",
-        "pagePath": "pages/place2/place2",
-        "text": "上海金山"
-      }
+        "selectedIconPath": "icons/baseline_build_black_48dp.png",
+        "pagePath": "pages/factory-erp/factory-erp",
+        "iconPath": "icons/baseline_build_black_48dp.png",
+        "text": "工厂ERP"
+     }
+   
     ]
   },
 
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-search": "/miniprogram_npm/vant-weapp/search/index",
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+    "van-swipe-cell":"/miniprogram_npm/vant-weapp/swipe-cell/index"
+  }
 }

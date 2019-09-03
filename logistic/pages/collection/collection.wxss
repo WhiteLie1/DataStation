@@ -1,0 +1,108 @@
+/* 展示位置 */
+page{
+  height:100%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1; /*可以让图片置于最底层，不会影响其它部分*/
+}
+.bg_input{
+  position: relative;
+  width: 94%;
+  margin-left: 3%;
+  border: 2rpx #A5A5A5 solid;
+  border-radius: 30rpx;
+  height: 55rpx;
+  text-align: center;
+  top: 20rpx;
+  font-size: 27rpx;
+  background-color: #C4C1C1;
+  opacity: 0.7;
+  color: #CBC9C9;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 65rpx;
+  width: 100%;
+}
+.box_text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 35rpx;
+}
+.bc_title{
+  color: white;
+  margin-left: 20rpx;
+}
+.bc_user{
+  width: 260rpx;
+  color: whitesmoke;
+  font-size: 23rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.user_img{
+  width: 55rpx;
+  height:55rpx;
+  border-radius: 50%;
+}
+.user_name{
+  font-size: 28rpx;
+  margin-left: 15rpx;
+  color: whitesmoke;
+  margin-top: 10rpx;
+}
+.bg_desc{
+  position: relative;
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  width:400rpx;
+  height:100rpx;
+  font-size: 28rpx;
+  color: whitesmoke;
+}
+
+/* 四大功能模块 */
+.function_style{
+  display: flex;
+  flex-wrap: wrap;
+}
+.function{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20rpx;
+  width: 23%;
+  height: 110rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+
+/* 商品列表 */
+.list{
+  position: relative;
+  margin-top: 30rpx;
+  background-color: #ffffff;
+  border: 2rpx #ffffff solid;
+  border-top-right-radius: 35rpx;
+  border-top-left-radius: 35rpx;
+  width: 100%;
+}
+.goods_card{
+  position: relative;
+  margin-top: 30rpx;
+}
+.van-card__desc{
+position: relative;
+margin-top: 15rpx;
+}
+.van-card_price{
+position: relative;
+margin-top: 15rpx;
+}

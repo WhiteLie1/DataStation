@@ -1,0 +1,37 @@
+<!-- 搜索框 -->
+<van-search placeholder="请输入搜索关键词" v-model="value" />
+
+<!-- 轮播图 -->
+<swiper indicator-dots='{{ indicatorDots }}' autoplay='{{ autoplay }}' interval='{{ interval }}' duration='{{ duration }}' circular="{{ circular }}" indicator-color='#B2B2B2' indicator-active-color='#5A5A5A'>
+  <block wx:for="{{ imgUrls }}" wx:key="{{ index }}">
+    <swiper-item>
+      <image class="slide_image" src="{{item}}" style='width=700rpx;height:280rpx'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 四大功能模块 -->
+<view class="function">
+  <view wx:for="{{ function }}" wx:key="{{ index }}">
+    <navigator class="function_mode" url="{{ item.event }}">
+      <image class="function_mode_img" src="{{ item.img }}"></image>
+      <text class="function_mode_word">{{ item.name }}</text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 推荐护肤单-->
+<view class="goods_listTitle">
+  <image src="/icons/tuijian.png" style="width:45rpx;height:45rpx"></image>
+  <text class="goods_listTitle_text">推荐护肤单</text>
+</view>
+
+<view class="goods">
+  <view class="goods_mode" wx:for="{{goods}}" wx:key="{{index}}">
+    <navigator url="/pages/collection/collection?id={{item.id}}">
+      <image class="goods_mode_img" src="{{item.img}}" style="width:216rpx;height:220rpx"></image>
+      <view class="goods_mode_desc">{{item.desc}}</view>
+      <view class="goods_mode_tag">{{item.tag}}</view>
+    </navigator>
+  </view>
+</view>
