@@ -2,7 +2,10 @@
   <view data-tapid="0" class="slid-item {{currentid2==0?'on':''}}" bindtap="tap2">数据展示</view>
   <view data-tapid="1" class="slid-item {{currentid2==1?'on':''}}" bindtap="tap2">数据统计</view>
 </view>
-
+<!--van-notice-bar
+  left-icon="/icons/laba.png"
+  text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+/-->
 <view class="outter2" style="width: 100%; height: 50rpx" wx:if="{{currentid2  == 1}}">
   <view data-tapid="0" class="slid-item {{currentid3==0?'on':''}}" bindtap="tap3">周</view>
   <view data-tapid="1" class="slid-item {{currentid3==1?'on':''}}" bindtap="tap3">月</view>

@@ -1,7 +1,15 @@
+
 <view class="outter" style="width: 100%; height: 50rpx">
   <view data-tapid="0" class="slid-item {{currentid2==0?'on':''}}" bindtap="tap2">数据展示</view>
   <view data-tapid="1" class="slid-item {{currentid2==1?'on':''}}" bindtap="tap2">数据统计</view>
 </view>
+<view style="color:DD001B">
+<van-notice-bar
+  left-icon="/icons/xiaoshou.png"
+  text="第二年AE01最小值为22，最大限度443，最小不符合规定，请及时处理!第二年AE01最小值为22，最大限度443，最小不符合规定，请及时处理!第二年AE01最小值为22，最大限度443，最小不符合规定，请及时处理!"
+/>
+</view>
+
 
 <view class="outter2" style="width: 100%; height: 50rpx" wx:if="{{currentid2  == 1}}">
   <view data-tapid="0" class="slid-item {{currentid3==0?'on':''}}" bindtap="tap3">周</view>

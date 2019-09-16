@@ -1,5 +1,7 @@
 {
+  "navigationBarTitleText": "物联网数据采集及分析报警软件",
   "usingComponents": {
-    "ec-canvas": "../../ec-canvas/ec-canvas"
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "van-notice-bar": "../../miniprogram_npm/vant-weapp/notice-bar/index"
   }
 }

@@ -25,7 +25,7 @@ function initChart1(canvas, width, height) {             //数据展示的第一
   var option = {
     
     title: {
-      text: '数据展示',
+     // text: '数据展示', 这里删除了来展示报警信息
       left: 'center'
     },
 

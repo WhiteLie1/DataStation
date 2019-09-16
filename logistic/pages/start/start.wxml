@@ -9,7 +9,8 @@
       <view class="hd">
         <image class="logo" src="{{userInfo.avatarUrl}}"></image>
            <view class="confirm-btn" bindtap='goToIndex'>
-          <text >奇螣智慧供应链系统</text>
+          <!--text >奇螣智慧供应链系统</text-->
+          <text >物联网数据采集及分析报警软件</text>
         </view>
       </view>
 

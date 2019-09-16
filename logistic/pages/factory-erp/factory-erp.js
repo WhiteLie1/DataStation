@@ -6,7 +6,7 @@ Page({
    */
   data: {
     function: [{
-      "img": "/icons/1.png",
+      "img": "/icons/yuanliao.png",
       "name": "原料仓",
       "event": ""
     }, {
@@ -19,7 +19,7 @@ Page({
       "event": "/pages/place2/place2"
     }],
     function2: [{
-      "img": "/icons/1.png",
+      "img": "/icons/cangku.png",
       "name": "成品仓",
       "event": ""
     }, {
@@ -32,7 +32,7 @@ Page({
       "event": ""
     }],
     function3: [{
-      "img": "/icons/1.png",
+      "img": "/icons/xiaoshou.png",
       "name": "销售",
       "event": ""
     }, {

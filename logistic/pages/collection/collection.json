@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "物联网数据采集及分析报警软件",
   "component": true,
   "usingComponents": {}
 }
